@@ -1,0 +1,80 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.genix.platform4</groupId>
+		<artifactId>com.genix.platform4.maven-support</artifactId>
+		<version>1.5-SNAPSHOT</version>
+	</parent>
+
+	<groupId>com.github.coolersport</groupId>
+	<artifactId>flogger-slf4j-backend</artifactId>
+	<version>0.4-SNAPSHOT</version>
+	<name>Flogger SLF4J Backend Factory</name>
+	<description>Dropin Replacement for default Flogger's system-backend and slf4j-backend</description>
+	<packaging>jar</packaging>
+
+	<scm>
+		<!-- Location of Git Repository for Release Tagging -->
+		<!-- NOTE: This needs to be overridden for every project. -->
+		<developerConnection>scm:git:https://github.com/coolersport/flogger-slf4j-backend.git</developerConnection>
+		<tag>HEAD</tag>
+	</scm>
+
+	<properties>
+		<flogger.version>0.4</flogger.version>
+	</properties>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>unpack</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>unpack</goal>
+						</goals>
+						<configuration>
+							<artifactItems>
+								<artifactItem>
+									<groupId>com.google.flogger</groupId>
+									<artifactId>flogger-system-backend</artifactId>
+									<version>${flogger.version}</version>
+									<type>jar</type>
+									<overWrite>true</overWrite>
+									<outputDirectory>${project.build.directory}/classes</outputDirectory>
+								</artifactItem>
+								<artifactItem>
+									<groupId>com.google.flogger</groupId>
+									<artifactId>flogger-slf4j-backend</artifactId>
+									<version>${flogger.version}</version>
+									<type>jar</type>
+									<overWrite>true</overWrite>
+									<outputDirectory>${project.build.directory}/classes</outputDirectory>
+								</artifactItem>
+							</artifactItems>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.google.flogger</groupId>
+			<artifactId>flogger-system-backend</artifactId>
+			<version>${flogger.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.google.flogger</groupId>
+			<artifactId>flogger-slf4j-backend</artifactId>
+			<version>${flogger.version}</version>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+</project>
