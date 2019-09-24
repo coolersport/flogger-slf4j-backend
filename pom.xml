@@ -1,5 +1,4 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>com.genix.platform4</groupId>
@@ -9,7 +8,7 @@
 
 	<groupId>com.github.coolersport</groupId>
 	<artifactId>flogger-slf4j-backend</artifactId>
-	<version>0.4-SNAPSHOT</version>
+	<version>0.4</version>
 	<name>Flogger SLF4J Backend Factory</name>
 	<description>Dropin Replacement for default Flogger's system-backend and slf4j-backend</description>
 	<packaging>jar</packaging>
@@ -18,7 +17,7 @@
 		<!-- Location of Git Repository for Release Tagging -->
 		<!-- NOTE: This needs to be overridden for every project. -->
 		<developerConnection>scm:git:https://github.com/coolersport/flogger-slf4j-backend.git</developerConnection>
-		<tag>HEAD</tag>
+		<tag>release-0.4</tag>
 	</scm>
 
 	<properties>
