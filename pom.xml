@@ -8,7 +8,7 @@
 
 	<groupId>com.github.coolersport</groupId>
 	<artifactId>flogger-slf4j-backend</artifactId>
-	<version>0.4</version>
+	<version>0.4.1-SNAPSHOT</version>
 	<name>Flogger SLF4J Backend Factory</name>
 	<description>Dropin Replacement for default Flogger's system-backend and slf4j-backend</description>
 	<packaging>jar</packaging>
@@ -17,7 +17,7 @@
 		<!-- Location of Git Repository for Release Tagging -->
 		<!-- NOTE: This needs to be overridden for every project. -->
 		<developerConnection>scm:git:https://github.com/coolersport/flogger-slf4j-backend.git</developerConnection>
-		<tag>release-0.4</tag>
+		<tag>HEAD</tag>
 	</scm>
 
 	<properties>
